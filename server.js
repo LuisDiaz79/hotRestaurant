@@ -4,7 +4,7 @@ var path = require("path");
 var connection = require("./db/connection");
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT ||   3000;
 
 // Configure the express app to accept JSON from the client
 app.use(express.urlencoded({ extended: true }));
